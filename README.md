@@ -10,7 +10,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   1. [Типове](#types)
   1. [Обекти](#objects)
   1. [Масиви](#arrays)
-  1. [Стрингове](#strings)
+  1. [Низове](#strings)
   1. [Функции](#functions)
   1. [Свойства](#properties)
   1. [Променливи](#variables)
@@ -173,9 +173,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     **[[⬆]](#TOC)**
 
 
-## <a name='strings'>Стрингове</a>
+## <a name='strings'>Низове</a>
 
-  - Използвайте единични кавички `''` за стрингове.
+  - Използвайте единични кавички `''` за Низове.
 
     ```javascript
     // зле
@@ -191,7 +191,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     var fullName = 'Bob ' + this.lastName;
     ```
 
-  - Стрингове, по-дълги от 80 символа трябва да се напишат на няколко реда, като се използва конкатенация.
+  - Низове, по-дълги от 80 символа трябва да се напишат на няколко реда, като се използва конкатенация.
   - Забележка: Ако се използват неправилно, . [jsPerf](http://jsperf.com/ya-string-concat) & [s](https://github.com/airbnb/javascript/issues/40)
 
     ```javascript
@@ -567,7 +567,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     + **Null** става **false**
     + **Booleans** става **the value of the boolean**
     + **Numbers** става **false** Ако **+0, -0, or NaN**, иначе **true**
-    + **Strings** става **false** ако е празен стринг`''`, иначе **true**
+    + **Strings** става **false** ако е празен низ`''`, иначе **true**
 
     ```javascript
     if ([0]) {
@@ -920,7 +920,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## <a name='type-coercion'>Преобразуване на типове</a>
 
   - Изпълнявайте преобразуването на типове в началото.
-  - Стринг:
+  - Низ:
 
     ```javascript
     //  => this.reviewScore = 9;
