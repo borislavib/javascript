@@ -77,7 +77,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте втория вариант за създаване на обект.
 
     ```javascript
-    // лошо
+    // зле
     var item = new Object();
 
     // добро
@@ -87,7 +87,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Не използвайте [запазени думи](http://es5.github.io/#x7.6.1) за деклариране на променливи. Тези променливи няма да работят на IE8. [Повече](https://github.com/airbnb/javascript/issues/61)
 
     ```javascript
-    // лошо
+    // зле
     var superman = {
       default: { clark: 'kent' },
       private: true
@@ -103,12 +103,12 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте смислени синоними на мястото на запазени думи.
 
     ```javascript
-    // лошо
+    // зле
     var superman = {
       class: 'alien'
     };
 
-    // лошо
+    // зле
     var superman = {
       klass: 'alien'
     };
@@ -125,10 +125,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте варианта със скобите за създаване на масив
 
     ```javascript
-    // лошо
+    // зле
     var items = new Array();
 
-    // добро
+    // добре
     var items = [];
     ```
 
@@ -216,7 +216,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       'fast.';
     ```
 
-  - Когато искате да направите стринг, използвайте Array#join вместо конкатенация. [jsPerf](http://jsperf.com/string-vs-array-concat/2).
+  - Когато искате да направите низ, използвайте Array#join вместо конкатенация. [jsPerf](http://jsperf.com/string-vs-array-concat/2).
 
     ```javascript
     var items,
@@ -1052,7 +1052,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     });
     ```
 
-  - Използвайте долно тире в началото `_`, когато именувате private променливи
+  - Използвайте долно тире в началото `_`, когато именувате частни променливи
 
     ```javascript
     // зле
