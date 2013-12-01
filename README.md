@@ -77,23 +77,23 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте втория вариант за създаване на обект.
 
     ```javascript
-    // зле
+    // лоша практика
     var item = new Object();
 
-    // добро
+    // добра практика
     var item = {};
     ```
 
   - Не използвайте [запазени думи](http://es5.github.io/#x7.6.1) за деклариране на променливи. Тези променливи няма да работят на IE8. [Повече](https://github.com/airbnb/javascript/issues/61)
 
     ```javascript
-    // зле
+    // лоша практика
     var superman = {
       default: { clark: 'kent' },
       private: true
     };
 
-    // добро
+    // добра практика
     var superman = {
       defaults: { clark: 'kent' },
       hidden: true
@@ -103,17 +103,17 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте смислени синоними на мястото на запазени думи.
 
     ```javascript
-    // зле
+    // лоша практика
     var superman = {
       class: 'alien'
     };
 
-    // зле
+    // лоша практика
     var superman = {
       klass: 'alien'
     };
 
-    // good
+    // добра практика
     var superman = {
       type: 'alien'
     };
@@ -125,7 +125,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте варианта със скобите за създаване на масив
 
     ```javascript
-    // зле
+    // лоша практика
     var items = new Array();
 
     // добра практика
@@ -138,7 +138,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     var someStack = [];
 
 
-    // зле
+    // лоша практика
     someStack[someStack.length] = 'abracadabra';
 
     // добра практика
@@ -152,7 +152,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
         itemsCopy = [],
         i;
 
-    // зле
+    // лоша практика
     for (i = 0; i < len; i++) {
       itemsCopy[i] = items[i];
     }
@@ -178,13 +178,13 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте единични кавички `''` за Низове.
 
     ```javascript
-    // зле
+    // лоша практика
     var name = "Bob Parr";
 
     // добра практика
     var name = 'Bob Parr';
 
-    // зле
+    // лоша практика
     var fullName = "Bob " + this.lastName;
 
     // добра практика
@@ -195,10 +195,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Забележка: Ако се използват неправилно, . [jsPerf](http://jsperf.com/ya-string-concat) & [s](https://github.com/airbnb/javascript/issues/40)
 
     ```javascript
-    // зле
+    // лоша практика
     var errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
 
-    // зле
+    // лоша практика
     var errorMessage = 'This is a super long error that \
     was thrown because of Batman. \
     When you stop to think about \
@@ -237,7 +237,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     length = messages.length;
 
-    // зле
+    // лоша практика
     function inbox(messages) {
       items = '<ul>';
 
@@ -288,7 +288,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - **Забележка:** ECMA-262 дефинира `block` като лист с декларации/твърдения. Декларирането на фунция не е твърдение. [Read ECMA-262's note on this issue](http://www.ecma-international.org/publications/files/ECMA-ST/Ecma-262.pdf#page=97).
 
     ```javascript
-    // зле
+    // лоша практика
     if (currentUser) {
       function test() {
         console.log('Nope.');
@@ -413,7 +413,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       test();
       console.log('doing stuff..');
 
-      //..other stuff..
+      //..други..
 
       var name = getName();
 
@@ -575,8 +575,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       // Ако масивът е обект, обектите връщат true
     }
     ```
-
-  - Use shortcuts.
+ 
   - Използвайте кратки варианти.
 
     ```javascript
