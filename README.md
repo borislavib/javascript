@@ -12,7 +12,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   1. [Масиви](#arrays)
   1. [Низове](#strings)
   1. [Функции](#functions)
-  1. [Свойства](#properties)
+  1. [Полета](#properties)
   1. [Променливи](#variables)
   1. [Деклариране и използване на променливи](#hoisting)
   1. [Условни изрази и равенства](#conditionals)
@@ -128,7 +128,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // зле
     var items = new Array();
 
-    // добре
+    // добра практика
     var items = [];
     ```
 
@@ -141,7 +141,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // зле
     someStack[someStack.length] = 'abracadabra';
 
-    // добре
+    // добра практика
     someStack.push('abracadabra');
     ```
 
@@ -157,7 +157,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       itemsCopy[i] = items[i];
     }
 
-    // добре
+    // добра практика
     itemsCopy = items.slice();
     ```
 
@@ -181,13 +181,13 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     // зле
     var name = "Bob Parr";
 
-    // добре
+    // добра практика
     var name = 'Bob Parr';
 
     // зле
     var fullName = "Bob " + this.lastName;
 
-    // добре
+    // добра практика
     var fullName = 'Bob ' + this.lastName;
     ```
 
@@ -207,7 +207,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     fast.';
 
 
-    // добре
+    // добра практика
     var errorMessage = 'This is a super long error that ' +
       'was thrown because of Batman.' +
       'When you stop to think about ' +
@@ -248,7 +248,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       return items + '</ul>';
     }
 
-    // добре
+    // добра практика
     function inbox(messages) {
       items = [];
 
@@ -295,7 +295,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       }
     }
 
-    // добре
+    // добра практика
     var test;
     if (currentUser) {
       test = function test() {
@@ -307,12 +307,12 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Никога не кръщавайте параметър `arguments`, това ще вземе значението на `arguments`-обекта, който е деклариран по подразбиране във всеки скоуп.
 
     ```javascript
-    // зле
+    // лоша практика
     function nope(name, options, arguments) {
       // ...stuff...
     }
 
-    // добре
+    // добра практика
     function yup(name, options, args) {
       // ...stuff...
     }
@@ -322,9 +322,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 
 
-## <a name='properties'>Свойства</a>
+## <a name='properties'>полета</a>
 
-  - Използвайте '.' за достъпване на свойства.
+  - Използвайте '.' за достъпване на полета.
 
     ```javascript
     var luke = {
@@ -332,14 +332,14 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       age: 28
     };
 
-    // зле
+    // лоша практика
     var isJedi = luke['jedi'];
 
-    // добре
+    // добра практика
     var isJedi = luke.jedi;
     ```
 
-  - Използвайте `[]` когато достъпвате свойства със променлива.
+  - Използвайте `[]` когато достъпвате полета със променлива.
 
     ```javascript
     var luke = {
@@ -362,22 +362,22 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Винаги използвайте `var` за деклариране на променливи. В противен случай се декларират глобални променливи. Ние искаме да не 'замърсяване' глобалното пространство с тях. Капитан планета ни предупреди за тях.
 
     ```javascript
-    // зле
+    // лоша практика
     superPower = new SuperPower();
 
-    // добре
+    // добра практика
     var superPower = new SuperPower();
     ```
 
   - Използвайте една `var` декларация за много променливи и декларирайте всяка променлива на нов ред.
 
     ```javascript
-    // зле
+    // лоша практика
     var items = getItems();
     var goSportsTeam = true;
     var dragonball = 'z';
 
-    // добре
+    // добра практика
     var items = getItems(),
         goSportsTeam = true,
         dragonball = 'z';
@@ -386,18 +386,18 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Декларирайте променливи, непродобили стойност последни. Това е полезно, когато по-късно се нуждаете от променлива зависеща от някоя от предходно дефинираните променливи.
 
     ```javascript
-    // зле
+    // лоша практика
     var i, len, dragonball,
         items = getItems(),
         goSportsTeam = true;
 
-    // зле
+    // лоша практика
     var i, items = getItems(),
         dragonball,
         goSportsTeam = true,
         len;
 
-    // добре
+    // добра практика
     var items = getItems(),
         goSportsTeam = true,
         dragonball,
@@ -408,7 +408,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Слагайте променливите винаги в началото на скоупа им. Това помага да се избегнат проблеми с декларации и неправомерно извикване на недефинирани променливи.
 
     ```javascript
-    // зле
+    // лоша практика
     function() {
       test();
       console.log('doing stuff..');
@@ -424,7 +424,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       return name;
     }
 
-    // добре
+    // добра практика
     function() {
       var name = getName();
 
@@ -440,7 +440,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       return name;
     }
 
-    // зле
+    // лоша практика
     function() {
       var name = getName();
 
@@ -451,7 +451,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       return true;
     }
 
-    // добре
+    // добра практика
     function() {
       if (!arguments.length) {
         return false;
@@ -571,8 +571,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
     ```javascript
     if ([0]) {
-      // вярно
-      // An array is an object, objects evaluate to true
+      // вярно 
       // Ако масивът е обект, обектите връщат true
     }
     ```
@@ -581,22 +580,22 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте кратки варианти.
 
     ```javascript
-    // зле
+    // лоша практика
     if (name !== '') {
       // ...stuff...
     }
 
-    // добре
+    // добра практика
     if (name) {
       // ...stuff...
     }
 
-    // зле
+    // лоша практика
     if (collection.length > 0) {
       // ...stuff...
     }
 
-    // добре
+    // добра практика
     if (collection.length) {
       // ...stuff...
     }
@@ -612,22 +611,22 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте скоби с всички многоредови блокове.
 
     ```javascript
-    // зле
+    // лоша практика
     if (test)
       return false;
 
-    // добре
+    // добра практика
     if (test) return false;
 
-    // добре
+    // добра практика
     if (test) {
       return false;
     }
 
-    // зле
+    // лоша практика
     function() { return false; }
 
-    // добре
+    // добра практика
     function() {
       return false;
     }
@@ -641,7 +640,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте `/** ... */` за многоредови коментари. Включете обяснение, изяснете типове и стойности за всички параметри и стойности, които се връщат от функцията.
 
     ```javascript
-    // зле
+    // лоша практика
     // make() returns a new element
     // based on the passed in tag name
     //
@@ -654,7 +653,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       return element;
     }
 
-    // добре
+    // добра практика
     /**
      * make() returns a new element
      * based on the passed in tag name
@@ -674,27 +673,25 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 
     ```javascript
-    // зле
+    // лоша практика
     var active = true;  // is current tab
 
-    // добре
+    // добра практика
     // is current tab
     var active = true;
 
-    // зле
+    // лоша практика
     function getType() {
-      console.log('fetching type...');
-      // set the default type to 'no type'
+      console.log('fetching type...'); 
       var type = this._type || 'no type';
 
       return type;
     }
 
-    // добре
+    // добра практика
     function getType() {
       console.log('fetching type...');
-
-      // set the default type to 'no type'
+ 
       var type = this._type || 'no type';
 
       return type;
@@ -737,17 +734,17 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте табулации с 2 празни пространства
 
     ```javascript
-    // зле
+    // лоша практика
     function() {
     ∙∙∙∙var name;
     }
 
-    // зле
+    // лоша практика
     function() {
     ∙var name;
     }
 
-    // добре
+    // добра практика
     function() {
     ∙∙var name;
     }
@@ -755,23 +752,23 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Поставяйте 1 празно пространство преди начална скоба.
 
     ```javascript
-    // зле
+    // лоша практика
     function test(){
       console.log('test');
     }
 
-    // добре
+    // добра практика
     function test() {
       console.log('test');
     }
 
-    // зле
+    // лоша практика
     dog.set('attr',{
       age: '1 year',
       breed: 'Bernese Mountain Dog'
     });
 
-    // добре
+    // добра практика
     dog.set('attr', {
       age: '1 year',
       breed: 'Bernese Mountain Dog'
@@ -780,14 +777,14 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Поставяйте празен ред в края на файл.
 
     ```javascript
-    // зле
+    // лоша практика
     (function(global) {
       // ...stuff...
     })(this);
     ```
 
     ```javascript
-    // добре
+    // добра практика
     (function(global) {
       // ...stuff...
     })(this);
@@ -797,10 +794,10 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте йерархично подравняване при дълги вериги от методи.
 
     ```javascript
-    // зле
+    // лоша практика
     $('#items').find('.selected').highlight().end().find('.open').updateCount();
 
-    // добре
+    // добра практика
     $('#items')
       .find('.selected')
         .highlight()
@@ -808,13 +805,13 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       .find('.open')
         .updateCount();
 
-    // зле
+    // лоша практика
     var leds = stage.selectAll('.led').data(data).enter().append('svg:svg').class('led', true)
         .attr('width',  (radius + margin) * 2).append('svg:g')
         .attr('transform', 'translate(' + (radius + margin) + ',' + (radius + margin) + ')')
         .call(tron.led);
 
-    // добре
+    // добра практика
     var leds = stage.selectAll('.led')
         .data(data)
       .enter().append('svg:svg')
@@ -832,17 +829,17 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Запетая на нов ред: **НЕ.**
 
     ```javascript
-    // зле
+    // лоша практика
     var once
       , upon
       , aTime;
 
-    // добре
+    // добра практика
     var once,
         upon,
         aTime;
 
-    // зле
+    // лоша практика
     var hero = {
         firstName: 'Bob'
       , lastName: 'Parr'
@@ -850,7 +847,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       , superPower: 'strength'
     };
 
-    // добре
+    // добра практика
     var hero = {
       firstName: 'Bob',
       lastName: 'Parr',
@@ -864,7 +861,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   > Издание 5 изяснява факта, че запетая в края на ArrayInitialiser не добавя дължина към масива. Това не е семантина промяна от издание 3, но някои реализации може да бъркат това.
 
     ```javascript
-    // зле
+    // лоша практика
     var hero = {
       firstName: 'Kevin',
       lastName: 'Flynn',
@@ -875,7 +872,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       'Superman',
     ];
 
-    // добре
+    // добра практика
     var hero = {
       firstName: 'Kevin',
       lastName: 'Flynn'
@@ -895,19 +892,19 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - **ДА.**
 
     ```javascript
-    // зле
+    // лоша практика
     (function() {
       var name = 'Skywalker'
       return name
     })()
 
-    // добре
+    // добра практика
     (function() {
       var name = 'Skywalker';
       return name;
     })();
 
-    // добре
+    // добра практика
     ;(function() {
       var name = 'Skywalker';
       return name;
@@ -925,16 +922,16 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```javascript
     //  => this.reviewScore = 9;
 
-    // зле
+    // лоша практика
     var totalScore = this.reviewScore + '';
 
-    // добре
+    // добра практика
     var totalScore = '' + this.reviewScore;
 
-    // зле
+    // лоша практика
     var totalScore = '' + this.reviewScore + ' total score';
 
-    // добре
+    // добра практика
     var totalScore = this.reviewScore + ' total score';
     ```
 
@@ -943,22 +940,22 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```javascript
     var inputValue = '4';
 
-    // зле
+    // лоша практика
     var val = new Number(inputValue);
 
-    // зле
+    // лоша практика
     var val = +inputValue;
 
-    // зле
+    // лоша практика
     var val = inputValue >> 0;
 
-    // зле
+    // лоша практика
     var val = parseInt(inputValue);
 
-    // добре
+    // добра практика
     var val = Number(inputValue);
 
-    // добре
+    // добра практика
     var val = parseInt(inputValue, 10);
     ```
 
@@ -968,7 +965,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - **Забележка:** Бъдете предпазливи като използвате промяна на битове. Числата са представени чрез [64-bit values](http://es5.github.io/#x4.3.19), но смяната на битове винаги връща 32-битов интиджер ([source](http://es5.github.io/#x11.7)). Смяната на битове може да доведе до неочаквано поведени при числови стойности на 32 бита. [Discussion](https://github.com/airbnb/javascript/issues/109)
 
     ```javascript
-    // добре
+    // добра практика
     /**
      * parseInt беше причина кода ми да е бавен.
      * Промяната на битове в стринга
@@ -982,13 +979,13 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     ```javascript
     var age = 0;
 
-    // зле
+    // лоша практика
     var hasAge = new Boolean(age);
 
-    // добре
+    // добра практика
     var hasAge = Boolean(age);
 
-    // добре
+    // добра практика
     var hasAge = !!age;
     ```
 
@@ -1000,12 +997,12 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Избягвайте имена от 1 буква. Обяснявайте какво наименувате.
 
     ```javascript
-    // зле
+    // лоша практика
     function q() {
       // ...stuff...
     }
 
-    // добре
+    // добра практика
     function query() {
       // ..stuff..
     }
@@ -1014,7 +1011,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте camelCase, когато именовате обекти, функции, и инстанции
 
     ```javascript
-    // зле
+    // лоша практика
     var OBJEcttsssss = {};
     var this_is_my_object = {};
     function c() {};
@@ -1022,7 +1019,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       name: 'Bob Parr'
     });
 
-    // добре
+    // добра практика
     var thisIsMyObject = {};
     function thisIsMyFunction() {};
     var user = new User({
@@ -1033,21 +1030,21 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте PascalCase когато именувате конструктори или класове
 
     ```javascript
-    // зле
+    // лоша практика
     function user(options) {
       this.name = options.name;
     }
 
-    var зле = new user({
+    var лоша практика = new user({
       name: 'nope'
     });
 
-    // добре
+    // добра практика
     function User(options) {
       this.name = options.name;
     }
 
-    var добре = new User({
+    var добра практика = new User({
       name: 'yup'
     });
     ```
@@ -1055,18 +1052,18 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте долно тире в началото `_`, когато именувате частни променливи
 
     ```javascript
-    // зле
+    // лоша практика
     this.__firstName__ = 'Panda';
     this.firstName_ = 'Panda';
 
-    // добре
+    // добра практика
     this._firstName = 'Panda';
     ```
 
   - Когато използвате референции към `this` използвайте `_this`.
 
     ```javascript
-    // зле
+    // лоша практика
     function() {
       var self = this;
       return function() {
@@ -1074,7 +1071,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       };
     }
 
-    // зле
+    // лоша практика
     function() {
       var that = this;
       return function() {
@@ -1082,7 +1079,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       };
     }
 
-    // добре
+    // добра практика
     function() {
       var _this = this;
       return function() {
@@ -1091,15 +1088,15 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-  - Именувайте си функцийте. Това е добре за проследяване на стака.
+  - Именувайте си функцийте. Това е добра практика за проследяване на стака.
 
     ```javascript
-    // зле
+    // лоша практика
     var log = function(msg) {
       console.log(msg);
     };
 
-    // добре
+    // добра практика
     var log = function log(msg) {
       console.log(msg);
     };
@@ -1114,28 +1111,28 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Ако има - ползвайте подобни на  getVal() и setVal('hello')
 
     ```javascript
-    // зле
+    // лоша практика
     dragon.age();
 
-    // добре
+    // добра практика
     dragon.getAge();
 
-    // зле
+    // лоша практика
     dragon.age(25);
 
-    // добре
+    // добра практика
     dragon.setAge(25);
     ```
 
   - Ако променлива е булева стойност, използвайте isVal() или hasVal()
 
     ```javascript
-    // зле
+    // лоша практика
     if (!dragon.age()) {
       return false;
     }
 
-    // добре
+    // добра практика
     if (!dragon.hasAge()) {
       return false;
     }
@@ -1171,7 +1168,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       console.log('new jedi');
     }
 
-    // зле
+    // лоша практика
     Jedi.prototype = {
       fight: function fight() {
         console.log('fighting');
@@ -1182,7 +1179,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       }
     };
 
-    // добре
+    // добра практика
     Jedi.prototype.fight = function fight() {
       console.log('fighting');
     };
@@ -1195,7 +1192,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Методите могат да връщат `this` помагайки с навързването на методи.
 
     ```javascript
-    // зле
+    // лоша практика
     Jedi.prototype.jump = function() {
       this.jumping = true;
       return true;
@@ -1209,7 +1206,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     luke.jump(); // => true
     luke.setHeight(20) // => undefined
 
-    // добре
+    // добра практика
     Jedi.prototype.jump = function() {
       this.jumping = true;
       return this;
@@ -1250,7 +1247,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 ## <a name='events'>Събития</a>
   
     ```javascript 
-    // зле
+    // лоша практика
     $(this).trigger('listingUpdated', listing.id);
 
     ...
@@ -1263,7 +1260,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     предпочитайте:
 
     ```javascript
-    // добре
+    // добра практика
     $(this).trigger('listingUpdated', { listingId : listing.id });
 
     ...
@@ -1316,15 +1313,15 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Поставете jQuery обекти променливи с `$`.
 
     ```javascript
-    // зле
+    // лоша практика
     var sidebar = $('.sidebar');
 
-    // добре
+    // добра практика
     var $sidebar = $('.sidebar');
     ``` 
 
     ```javascript
-    // зле
+    // лоша практика
     function setSidebar() {
       $('.sidebar').hide();
 
@@ -1335,7 +1332,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
       });
     }
 
-    // добре
+    // добра практика
     function setSidebar() {
       var $sidebar = $('.sidebar');
       $sidebar.hide();
@@ -1354,19 +1351,19 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - Използвайте `find` в jQuery за по-лесно намиране в скоуп.
 
     ```javascript
-    // зле
+    // лоша практика
     $('ul', '.sidebar').hide();
 
-    // зле
+    // лоша практика
     $('.sidebar').find('ul').hide();
 
-    // добре
+    // добра практика
     $('.sidebar ul').hide();
 
-    // добре
+    // добра практика
     $('.sidebar > ul').hide();
 
-    // добре
+    // добра практика
     $sidebar.find('ul');
     ```
 
@@ -1433,7 +1430,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 **Книги**
 
-  - [JavaScript: The добре Parts](http://www.amazon.com/JavaScript-добре-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
+  - [JavaScript: The good Parts](http://www.amazon.com/JavaScript-good-Parts-Douglas-Crockford/dp/0596517742) - Douglas Crockford
   - [JavaScript Patterns](http://www.amazon.com/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752) - Stoyan Stefanov
   - [Pro JavaScript Design Patterns](http://www.amazon.com/JavaScript-Design-Patterns-Recipes-Problem-Solution/dp/159059908X)  - Ross Harmes and Dustin Diaz
   - [High Performance Web Sites: Essential Knowledge for Front-End Engineers](http://www.amazon.com/High-Performance-Web-Sites-Essential/dp/0596529309) - Steve Souders
@@ -1452,7 +1449,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   - [JavaScript Weekly](http://javascriptweekly.com/)
   - [JavaScript, JavaScript...](http://javascriptweblog.wordpress.com/)
   - [Bocoup Weblog](http://weblog.bocoup.com/)
-  - [Adequately добре](http://www.adequatelygood.com/)
+  - [Adequately good](http://www.adequatelygood.com/)
   - [NCZOnline](http://www.nczonline.net/)
   - [Perfection Kills](http://perfectionkills.com/)
   - [Ben Alman](http://benalman.com/)
