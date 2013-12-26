@@ -18,7 +18,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
   1. [Условни изрази и равенства](#conditionals)
   1. [Блокове](#blocks)
   1. [Коментари](#comments)
-  1. [Празни пространства](#whitespace)
+  1. [Празни полета](#whitespace)
   1. [Запетаи](#commas)
   1. [Точка и запетая](#semicolons)
   1. [Преобразуване на типове](#type-coercion)
@@ -304,7 +304,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     }
     ```
 
-  - Никога не кръщавайте параметър `arguments`, това ще вземе значението на `arguments`-обекта, който е деклариран по подразбиране във всеки скоуп.
+  - Никога не наименовайте параметър `arguments`, това ще вземе значението на `arguments`-обекта, който е деклариран по подразбиране във всеки скоуп.
 
     ```javascript
     // лоша практика
@@ -322,7 +322,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 
 
-## <a name='properties'>полета</a>
+## <a name='properties'>Полета</a>
 
   - Използвайте '.' за достъпване на полета.
 
@@ -339,7 +339,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     var isJedi = luke.jedi;
     ```
 
-  - Използвайте `[]` когато достъпвате полета със променлива.
+  - Използвайте `[]` когато достъпвате полета с променлива.
 
     ```javascript
     var luke = {
@@ -359,7 +359,7 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
 
 ## <a name='variables'>Променливи</a>
 
-  - Винаги използвайте `var` за деклариране на променливи. В противен случай се декларират глобални променливи. Ние искаме да не 'замърсяване' глобалното пространство с тях. Капитан планета ни предупреди за тях.
+  - Винаги използвайте `var` за деклариране на променливи. В противен случай се декларират глобални променливи. Ние искаме да не 'замърсяване' глобалното пространство с тях. 'Капитан планета ни предупреди за тях'.
 
     ```javascript
     // лоша практика
@@ -728,9 +728,9 @@ Original Repository: [airbnb/javascript](https://github.com/airbnb/javascript)
     **[[⬆]](#TOC)**
 
 
-## <a name='whitespace'>Празни пространства</a>
+## <a name='whitespace'>Празни полета</a>
 
-  - Използвайте табулации с 2 празни пространства
+  - Използвайте табулации с 2 празни полета
 
     ```javascript
     // лоша практика
